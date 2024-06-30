@@ -25,7 +25,7 @@ const Cards = ({ item }) => {
         email: user.email,
       };
       // console.log(cartItem);
-      fetch("http://localhost:5000/cart", {
+      fetch("https://online-restaurant-backend.onrender.com/cart", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
