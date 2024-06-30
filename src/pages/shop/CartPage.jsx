@@ -24,7 +24,7 @@ const CartPage = () => {
   const handleDecrement = (item) => {
     // console.log(item._id);
    if(item.quantity>1){
-    fetch(`http://localhost:5000/cart/${item._id}`, {
+    fetch(`https://online-restaurant-backend.onrender.com/cart/${item._id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json; charset=UTF-8'
@@ -49,7 +49,7 @@ const CartPage = () => {
 
   const handleIncrement = (item) => {
     // console.log(item._id);
-    fetch(`http://localhost:5000/cart/${item._id}`, {
+    fetch(`https://online-restaurant-backend.onrender.com/${item._id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json; charset=UTF-8'
@@ -79,7 +79,7 @@ const CartPage = () => {
       confirmButtonText: "Yes, delete it!"
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/cart/${item._id}`,
+        fetch(`https://online-restaurant-backend.onrender.com/cart/${item._id}`,
         {
           method: 'DELETE'
         }
