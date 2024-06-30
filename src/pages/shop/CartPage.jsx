@@ -49,7 +49,7 @@ const CartPage = () => {
 
   const handleIncrement = (item) => {
     // console.log(item._id);
-    fetch(`https://online-restaurant-backend.onrender.com/${item._id}`, {
+    fetch(`https://online-restaurant-backend.onrender.com/cart/${item._id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json; charset=UTF-8'
