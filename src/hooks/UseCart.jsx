@@ -8,7 +8,7 @@ const UseCart = () => {
     const {refetch,data:cart=[]}=useQuery({
         queryKey:['cart',user?.email],
         queryFn: async () => {
-            const req=await fetch(`http://localhost:5000/cart?email=${user?.email}`);
+            const req=await fetch(`https://online-restaurant-backend.onrender.com/cart?email=${user?.email}`);
             return req.json();
           },
     })
